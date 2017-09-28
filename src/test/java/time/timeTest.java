@@ -11,7 +11,7 @@ public class timeTest {
 
         String result = time.getTime();
 
-        assertNotNull(result);
+        assertTrue(result.length() >= 10);
 
     }
 }
