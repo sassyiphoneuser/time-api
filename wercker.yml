@@ -67,8 +67,14 @@ deploy-to-kubernetes:
         command: apply -f $WERCKER_OUTPUT_DIR/kubernetes/
 
     - kubectl:
+        name: deploy to kubernetes
+        server: $KUBERNETES_MASTER
+        token: $KUBERNETES_TOKEN
+        insecure-skip-tls-verify: true
+        command: version
+
+    - kubectl:
         name: set deployment timeout
-        cwd: deployment
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
@@ -76,7 +82,6 @@ deploy-to-kubernetes:
 
     - kubectl:
         name: check deployment status
-        cwd: deployment
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
