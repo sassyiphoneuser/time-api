@@ -79,5 +79,3 @@ deploy-to-kubernetes:
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
         command: rollout status deployment/time-api
-
-
