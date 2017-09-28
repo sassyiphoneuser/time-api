@@ -14,7 +14,7 @@ public class Time {
         this.time = dateFormat.format(date);
     }
 
-    public String getTime() {
+    public String getTime(){
         return;
     }
 }
