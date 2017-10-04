@@ -15,7 +15,7 @@ public class Time {
     }
 
     public String getTime(){
-        return;
+        return ;
 
     }
 }
