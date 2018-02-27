@@ -32,6 +32,10 @@ build:
 push-image:
     steps:
         - internal/docker-push:
+            repository: oow17/time-api
+            registry: https://registry.hub.docker.com
+            username: $DOCKER_USERNAME
+            password: $DOCKER_PASSWORD
             cmd: java -jar /pipeline/source/time-api.jar
             tag: $WERCKER_GIT_BRANCH
             ports: "8080"
