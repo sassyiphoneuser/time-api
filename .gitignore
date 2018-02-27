@@ -2,3 +2,4 @@ build/*
 .gradle
 .wercker/*
 .DS_STORE
+demo_notes
