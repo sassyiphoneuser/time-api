@@ -15,6 +15,6 @@ public class Time {
     }
 
     public String getTime(){
-        return this.time;
+        return;
     }
 }
